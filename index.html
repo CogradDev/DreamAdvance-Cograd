@@ -96,7 +96,7 @@
             </li> -->
 
             <li class="navbar-item">
-              <a href="#" class="navbar-link" data-nav-link>Contact</a>
+              <a href="#contact" class="navbar-link" data-nav-link>Contact</a>
             </li>
           </ul>
         </nav>
@@ -1841,58 +1841,165 @@
           padding: 20px;
           border-radius: 10px;
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-          width: 350px;
+          max-width: 500px;
+          margin: auto;
           animation: fadeIn 1s ease-in-out;
+          font-family: Arial, sans-serif;
         "
       >
-        <h2 style="margin: 0 0 15px; color: #333">Contact Us</h2>
-        <form action="https://formspree.io/f/xdoqjqlo" method="POST">
-          <label
-            for="email"
-            style="display: block; margin: 10px 0 5px; color: #333"
-            >Your email:</label
-          >
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            style="
-              width: 100%;
-              padding: 10px;
-              margin-bottom: 15px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-            "
-          />
+        <h2 style="margin: 0 0 15px; color: #333; text-align: center">
+          Contact Us
+        </h2>
+        <form
+          action="https://formspree.io/f/xyzzbeeg"
+          method="POST"
+          style="display: flex; flex-wrap: wrap; gap: 10px"
+        >
+          <!-- Name Field -->
+          <div style="flex: 1">
+            <label
+              for="name"
+              style="
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+                font-weight: bold;
+              "
+              >Your Name:</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="Name"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+              "
+            />
+          </div>
 
-          <label
-            for="message"
-            style="display: block; margin: 10px 0 5px; color: #333"
-            >Your message:</label
-          >
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            required
-            style="
-              width: 100%;
-              padding: 10px;
-              margin-bottom: 15px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-            "
-          ></textarea>
+          <!-- Mobile Number Field -->
+          <div style="flex: 1">
+            <label
+              for="mobile"
+              style="
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+                font-weight: bold;
+              "
+              >Mobile Number:</label
+            >
+            <input
+              type="tel"
+              id="mobile"
+              name="Mobile"
+              pattern="[0-9]{10}"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+              "
+            />
+          </div>
 
-          <!-- your other form fields go here -->
+          <!-- Email Field -->
+          <!-- <div style="width: 100%">
+            <label
+              for="email"
+              style="
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+                font-weight: bold;
+              "
+              >Your Email:</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+              "
+            />
+          </div> -->
 
+          <!-- Address Field -->
+          <div style="width: 100%">
+            <label
+              for="address"
+              style="
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+                font-weight: bold;
+              "
+              >Your Address:</label
+            >
+            <textarea
+              id="address"
+              name="Address"
+              rows="1"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                resize: none;
+              "
+            ></textarea>
+          </div>
+
+          <!-- Message Field -->
+          <div style="width: 100%">
+            <label
+              for="message"
+              style="
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+                font-weight: bold;
+              "
+              >Your Message:</label
+            >
+            <textarea
+              id="message"
+              name="Message"
+              rows="2"
+              required
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                resize: none;
+              "
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
           <button
             type="submit"
             style="
               background-color: #4caf50;
               color: white;
-              padding: 10px 20px;
+              padding: 10px;
               border: none;
               border-radius: 4px;
               cursor: pointer;
