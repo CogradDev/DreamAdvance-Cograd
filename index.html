@@ -48,42 +48,143 @@
     <title>Welcome Popup</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <style>
-      /* Modal styles */
-      .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0, 0, 0); /* Fallback color */
-        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-      }
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background for better contrast */
+}
 
-      .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #053f69;
-        border-radius: 30px;
-        width: 50%; /* Could be more or less, depending on screen size */
-      }
+/* Modal content styles */
+.modal-content {
+    background-color: #ffffff; /* White background for the modal */
+    margin: 5% auto; /* Center the modal */
+    padding: 30px; /* Increased padding for better spacing */
+    border-radius: 12px; /* Slightly more rounded corners */
+    width: 90%; /* Full width on small screens */
+    max-width: 600px; /* Increased maximum width */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+    animation: fadeIn 0.3s ease; /* Fade-in animation */
+}
 
-      .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-      }
+/* Close button styles */
+.close {
+    color: #ff4d4d; /* Red color for the close button */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-      .close:hover,
-      .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-      }
+.close:hover,
+.close:focus {
+    color: #ff0000; /* Change color on hover for visibility */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form styles */
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+h2 {
+    text-align: center; /* Center heading */
+    margin: 0 0 10px; /* Space below heading */
+    font-size: 28px; /* Larger font size for the title */
+    color: #333; /* Darker color for better readability */
+}
+
+h5 {
+    text-align: center; /* Center subheading */
+    margin: 0 0 20px; /* Space below subheading */
+    font-size: 18px; /* Font size for subheading */
+    color: #555; /* Slightly lighter color */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+    color: #333; /* Label color */
+    font-weight: bold; /* Bold labels */
+}
+
+input, textarea {
+    padding: 12px; /* Increased padding for better touch targets */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 16px; /* Font size for better readability */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input:focus, textarea:focus {
+    border-color: #4caf50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+button {
+    padding: 12px; /* Increased padding for better touch targets */
+    background-color: #4caf50; /* Button color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    font-size: 16px; /* Font size for better readability */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker button color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 5% auto; /* Adjust margin for smaller screens */
+        width: 95%; /* Full width on small screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Adjust heading size for mobile */
+    }
+
+    h5 {
+        font-size: 16px; /* Adjust subheading size for mobile */
+    }
+
+    input, textarea {
+        font-size: 14px; /* Adjust input size for mobile */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button size for mobile */
+    }
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide in from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
     </style>
   </head>
 
@@ -1232,7 +1333,7 @@ Designed for learners with a basic understanding of STEM concepts, this 14-day w
                     </ul>
                   </div>
                    <div class="rating-wrapper">
-Aimed at aspiring innovators, this comprehensive 45-day program offers in-depth exploration and project-based learning in advanced STEM domains. Participants will master topics such as autonomous drones, agricultural IoT systems, and space mission simulations. With expert guidance and cutting-edge tools, students will develop industry-level projects, preparing them for academic and professional excellence in technology and innovation.                      </div>
+Aimed at aspiring innovators, this comprehensive 45-day program offers in-depth exploration and project-based learning in advanced STEM domains. Participants will master topics such as autonomous drones, agricultural IoT systems, and space mission simulations. With expert guidance and cutting-edge tools, students will develop industry-level projects, preparing them for academic and professional excellence in technology and innovation.                      </div>
                 </div>
               </li>
             </ul>
@@ -1322,7 +1423,7 @@ Aimed at aspiring innovators, this comprehensive 45-day program offers in-depth 
                 Then this workshop is completely for you. <br />There is a huge
                 scope for Aero-modelling as a career option and it also enhances
                 your creative skills. <br />
-                Don’t forget that We will also be having flying sessions for
+                Don't forget that We will also be having flying sessions for
                 your hand made aircrafts.
                 <br />
                 Course Outline: Introduction to Aerodynamics, designing various
@@ -1365,7 +1466,7 @@ Aimed at aspiring innovators, this comprehensive 45-day program offers in-depth 
                 interest in flexing with your hand made quadcopter, then this
                 workshop is completely for you.
                 <br />
-                We’ll ensure that you have the maximum out of this workshop and
+                We'll ensure that you have the maximum out of this workshop and
                 harness your interest in more creative activities.<br />
                 So the time has come to join our Drone Tech course now and build
                 your own drone.
@@ -1454,7 +1555,7 @@ Aimed at aspiring innovators, this comprehensive 45-day program offers in-depth 
                 <br />
                 Here the Cograd has come up with an exciting workshop on Space
                 Tech. We will also be doing a simulation based Mars mission.<br />
-                Exploring space is always amusing. Don’t miss the chance to join
+                Exploring space is always amusing. Don't miss the chance to join
                 this workshop. Enrol now and explore the universe.
                 <br />
                 Course Outline: Basics of Aerodynamics, types of fuels,
@@ -1860,7 +1961,7 @@ Aimed at aspiring innovators, this comprehensive 45-day program offers in-depth 
             "
           >
             <h2 style="margin: 0 0 15px; color: #333; text-align: center">
-             DREAM ADVANCE Workshop Registration Form </h2>
+             DREAM ADVANCE Workshop Registration Form </h2>
              <h5>Join Our Exciting Workshops! Learn Robotics, AI, Drones, and More! </h5>
 
             <form
@@ -2268,198 +2369,45 @@ Aimed at aspiring innovators, this comprehensive 45-day program offers in-depth 
     <div id="welcomeModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <Contact
-          style="
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            border-radius: 30px;
-            align-items: center;
-            height: 85vh;
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-          "
-        >
-          <div
-            class="contact-form"
-            style="
-              background: #fff;
-              padding: 20px;
-              border-radius: 10px;
-              box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-              max-width: 500px;
-              margin: auto;
-              animation: fadeIn 1s ease-in-out;
-              font-family: Arial, sans-serif;
-            "
-          >
-            <h2 style="margin: 0 0 15px; color: #333; text-align: center">
-             DREAM ADVANCE Workshop Registration Form </h2>
-             <h5>Join Our Exciting Workshops! Learn Robotics, AI, Drones, and More! </h5>
+        <div class="contact-form">
+            <h2>DREAM ADVANCE Workshop Registration Form</h2>
+            <h5>Join Our Exciting Workshops! Learn Robotics, AI, Drones, and More!</h5>
 
-            <form
-              action="https://formspree.io/f/xyzzbeeg"
-              method="POST"
-              style="display: flex; flex-wrap: wrap; gap: 10px"
-            >
-              <!-- Name Field -->
-              <div style="flex: 1">
-                <label
-                  for="name"
-                  style="
-                    display: block;
-                    margin-bottom: 5px;
-                    color: #333;
-                    font-weight: bold;
-                  "
-                  >Your Name:</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  name="Name"
-                  required
-                  style="
-                    width: 100%;
-                    padding: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    box-sizing: border-box;
-                  "
-                />
-              </div>
+            <form action="https://formspree.io/f/xyzzbeeg" method="POST">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="Name" required />
+                </div>
 
-              <!-- Mobile Number Field -->
-              <div style="flex: 1">
-                <label
-                  for="mobile"
-                  style="
-                    display: block;
-                    margin-bottom: 5px;
-                    color: #333;
-                    font-weight: bold;
-                  "
-                  >Mobile Number:</label
-                >
-                <input
-                  type="tel"
-                  id="mobile"
-                  name="Mobile"
-                  pattern="[0-9]{10}"
-                  required
-                  style="
-                    width: 100%;
-                    padding: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    box-sizing: border-box;
-                  "
-                />
-              </div>
+                <!-- Mobile Number Field -->
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="Mobile" pattern="[0-9]{10}" required />
+                </div>
 
-              <!-- Email Field -->
-              <div style="width: 100%">
-            <label
-              for="email"
-              style="
-                display: block;
-                margin-bottom: 5px;
-                color: #333;
-                font-weight: bold;
-              "
-              >Your Email:</label
-            >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              style="
-                width: 100%;
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box;
-              "
-            />
-          </div>
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
 
-              <!-- Address Field -->
-              <div style="width: 100%">
-                <label
-                  for="address"
-                  style="
-                    display: block;
-                    margin-bottom: 5px;
-                    color: #333;
-                    font-weight: bold;
-                  "
-                  >Location/City:</label
-                >
-                <textarea
-                  id="address"
-                  name="Address"
-                  rows="1"
-                  required
-                  style="
-                    width: 100%;
-                    padding: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    box-sizing: border-box;
-                    resize: none;
-                  "
-                ></textarea>
-              </div>
+                <!-- Address Field -->
+                <div class="form-group">
+                    <label for="address">Location/City:</label>
+                    <textarea id="address" name="Address" rows="1" required></textarea>
+                </div>
 
-              <!-- Message Field -->
-              <div style="width: 100%">
-                <label
-                  for="message"
-                  style="
-                    display: block;
-                    margin-bottom: 5px;
-                    color: #333;
-                    font-weight: bold;
-                  "
-                  >Message/Query (Optional):</label
-                >
-                <textarea
-                  id="message"
-                  name="Message"
-                  rows="2"
-                  required
-                  style="
-                    width: 100%;
-                    padding: 10px;
-                    border: 1px solid #ccc;
-                    border-radius: 4px;
-                    box-sizing: border-box;
-                    resize: none;
-                  "
-                ></textarea>
-              </div>
+                <!-- Message Field -->
+                <div class="form-group">
+                    <label for="message">Message/Query (Optional):</label>
+                    <textarea id="message" name="Message" rows="2"></textarea>
+                </div>
 
-              <!-- Submit Button -->
-              <button
-                type="submit"
-                style="
-                  background-color: #4caf50;
-                  color: white;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;
-                  width: 100%;
-                  transition: background-color 0.3s;
-                "
-              >
-                Submit and Reserve your Spot!
-              </button>
+                <!-- Submit Button -->
+                <button type="submit">Submit and Reserve your Spot!</button>
             </form>
-          </div>
-        </Contact>
+        </div>
       </div>
     </div>
 
